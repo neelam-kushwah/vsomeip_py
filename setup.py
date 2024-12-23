@@ -35,7 +35,7 @@ vsomeip_extension = Extension('vsomeip_ext',
                       sources=[os.path.join(extension_path, 'vsomeip.cpp')],
                       libraries=['vsomeip3', 'vsomeip3-cfg'],
                       library_dirs=['/usr/local/lib/' if not is_windows else os.path.join(pathlib.Path.home().drive, os.sep, 'vsomeip', 'lib')],
-                      extra_compile_args = ['-std=c++14'] if not is_windows else ['-DWIN32', '/std:c++14', '/MD', '/EHsc', '/wd4250'],
+                      extra_compile_args = ['-std=c++17'] if not is_windows else ['-DWIN32', '/std:c++17', '/MD', '/EHsc', '/wd4250'],
                       runtime_library_dirs=['/usr/local/lib/'] if not is_windows else [])
 
 setup(
